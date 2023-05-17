@@ -1,6 +1,6 @@
 import { Toaster } from 'react-hot-toast';
 
-import { Inter } from 'next/font/google';
+import { Nunito } from 'next/font/google';
 
 import LoginModal from '@/components/modal/LoginModal';
 import Modal from '@/components/modal/Modal';
@@ -10,7 +10,7 @@ import Navbar from '@/components/navbar/Navbar';
 import getCurrentUser from './actions/getCurrentUser';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const nunito = Nunito({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Create Next App',
@@ -26,7 +26,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={nunito.className}>
         <RegisterModal />
         <LoginModal />
         <Toaster />

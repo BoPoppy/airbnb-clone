@@ -87,24 +87,27 @@ const LoginModal = (props: Props) => {
       <hr />
       <Button
         outline
-        label="Conite with Google"
+        label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => signIn('google')}
       />
       <Button
         outline
-        label="Conite with Github"
+        label="Continue with Github"
         icon={AiFillGithub}
-        onClick={() => {}}
+        onClick={() => signIn('github')}
       />
       <div className="text-neutral-500 text-center mt-4 font-light">
         <div className="justify-center flex flex-row items-center gap-2">
-          <div>Already have an account?</div>
+          <div>Don&apos;t have an account?</div>
           <div
-            onClick={loginModal.onClose}
+            onClick={() => {
+              loginModal.onClose();
+              registerModal.onOpen();
+            }}
             className="text-neutral-800 cursor-pointer hover:underline"
           >
-            Log in
+            Register
           </div>
         </div>
       </div>
